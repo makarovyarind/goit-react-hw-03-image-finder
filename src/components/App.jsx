@@ -82,22 +82,10 @@ export class App extends Component {
           <Searchbar onSubmit={this.serchImageSubmit} />
           <ImageGallery images={images} onClick={this.showModel}/>
           <Button onClick={this.serchImageLoadMore} />
+         
           {showModal && <Modal selectedImage={selectedImage} onClose={this.closeModal} />}
         </div>
       );
     };
-
-
-
-    return (
-      <div className="App">
-                
-        {/* <Searchbar onSubmit={this.serchImageSubmit} /> */}
-        {/* <ImageGallery images={images} onClick={this.showModel}/> */}
-        {/* <Loader /> */}
-        {/* <Button onClick={this.serchImageLoadMore} /> */}
-        {/* {showModal && <Modal selectedImage={selectedImage} onClose={this.closeModal} />} */}
-      </div>
-    );
   }
 }
