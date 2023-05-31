@@ -58,7 +58,7 @@ export class App extends Component {
   }
 
   render() {
-    const { showModal, images, selectedImage, status } = this.state;
+    const { showModal, images, selectedImage, status, currentPage } = this.state;
 
     if(status === 'idle') {
       return(
@@ -81,7 +81,7 @@ export class App extends Component {
         <div className="App">
           <Searchbar onSubmit={this.serchImageSubmit} />
           <ImageGallery images={images} onClick={this.showModel}/>
-          <Button onClick={this.serchImageLoadMore} />
+          {images.length - 1 !== currentPage && (<Button onClick={this.serchImageLoadMore} />)}
          
           {showModal && <Modal selectedImage={selectedImage} onClose={this.closeModal} />}
         </div>
